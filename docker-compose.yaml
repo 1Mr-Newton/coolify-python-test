@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  telegram-bot:
+    container_name: my_telegram_bot
+    build: .
+    environment:
+      API_ID: ${API_ID}
+      API_HASH: ${API_HASH}
+      BOT_TOKEN: ${BOT_TOKEN}
+    volumes:
+      - ./app
+    restart: unless-stopped
