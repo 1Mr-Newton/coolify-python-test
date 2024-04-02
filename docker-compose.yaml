@@ -9,5 +9,5 @@ services:
       API_HASH: ${API_HASH}
       BOT_TOKEN: ${BOT_TOKEN}
     volumes:
-      - ./app
+      - .:/app
     restart: unless-stopped
