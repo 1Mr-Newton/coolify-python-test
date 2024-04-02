@@ -18,7 +18,7 @@ client = TelegramClient("anon", int(api_id), api_hash).start(bot_token=bot_token
 @client.on(events.NewMessage)  # type: ignore
 async def handler(event):
     print(event.raw_text)
-    await event.response("Sup boy?")
+    await event.respond("Sup boy?")
 
 
 client.run_until_disconnected()
